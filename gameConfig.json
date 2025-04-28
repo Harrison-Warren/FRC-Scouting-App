@@ -1,0 +1,10 @@
+{
+  "gameName": "2025 FRC Game",
+  "fields": [
+    { "label": "Auto Score", "type": "number" },
+    { "label": "Cycle Score", "type": "number" },
+    { "label": "Endgame Performance", "type": "number" },
+    { "label": "Driver Skill (1-10)", "type": "number" },
+    { "label": "Comments", "type": "text" }
+  ]
+}
