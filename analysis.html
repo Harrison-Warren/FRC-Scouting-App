@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Page</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 8px; border: 1px solid #ddd; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Scouting Analysis</h1>
+    <table id="analysisTable">
+        <thead>
+            <tr>
+                <th>Team Number</th>
+                <th>Auto Score</th>
+                <th>Cycle Score</th>
+                <th>Endgame</th>
+                <th>Driver Skill</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Scouting data will be inserted here -->
+        </tbody>
+    </table>
+    <script>
+        const sampleData = [
+            { team: "1678", autoScore: 10, cycleScore: 12, endgame: 8, driverSkill: 9, comments: "Good robot" },
+            { team: "254", autoScore: 15, cycleScore: 18, endgame: 10, driverSkill: 10, comments: "Amazing!" }
+        ];
+
+        const tableBody = document.getElementById('analysisTable').getElementsByTagName('tbody')[0];
+        sampleData.forEach((data) => {
+            const row = tableBody.insertRow();
+            row.innerHTML = `
+                <td>${data.team}</td>
+                <td>${data.autoScore}</td>
+                <td>${data.cycleScore}</td>
+                <td>${data.endgame}</td>
+                <td>${data.driverSkill}</td>
+                <td>${data.comments}</td>
+            `;
+        });
+    </script>
+</body>
+</html>
